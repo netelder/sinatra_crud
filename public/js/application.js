@@ -1,5 +1,10 @@
 $('document').ready(function() {
 
+  $('#new_note').on('click', function(e){
+    e.preventDefault();
+    $('#note_form').delay(200).slideDown(500);
+  });
+
   $('#eventsubmit').on('click', function(e){
     console.log("eventsubmit");
     e.preventDefault();
