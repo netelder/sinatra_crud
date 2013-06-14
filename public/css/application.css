@@ -1,8 +1,13 @@
+body {
+  background-color: beige;
+}
+
 .container {
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+
+  /*border: 1px dotted black;*/
 }
 th {
   text-align: left;
@@ -20,9 +25,9 @@ nav div{
 }
 
 nav h2 {
-	width: 80%;
+	width: 40%;
 	float: left;
-	margin: 5px 0 5px 40px;
+	margin: 5px 0 5px 20px;
 }
 nav a {
   text-decoration: none;
@@ -33,4 +38,16 @@ nav a {
 
 .hide {
 	display: none;
+}
+
+.content {
+  list-style-type: none;
+  margin-top: .25em;
+  margin-bottom: .75em;
+  padding-bottom: .25em;
+  border-bottom: dotted gray 1px;
+}
+
+.title {
+  font-weight: bold;
 }

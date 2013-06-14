@@ -1,12 +1,18 @@
 <div class="container">
-    <div class="hide" id="note_form">
-      <div class="input select">
-        <input type="text" name="title" id="title" placeholder="Note Title" size="41" autofocus>
-        <br>
-        <textarea type="text" name="content" id="content" placeholder="Note Content" rows="6" cols="40"></textarea>
-        <br>
-        <button type="submit" name="submit">Submit</button>
-      </div>
+  <div class="hide" id="note_form">
+    <div class="input select">
+      <input type="text" name="title" id="title" placeholder="Note Title" size="41" autofocus>
+      <br>
+      <textarea type="text" name="content" id="content" placeholder="Note Content" rows="6" cols="40"></textarea>
+      <br>
+      <button type="submit" name="submit">Submit</button>
     </div>
-
+  </div>
+  <div id="note_list">
+    <ol>
+    <% @notes.each do |note| %>
+      <%= "<li class=\"title\">#{note.title}</li><ul class=\"content\"><li>#{note.content}</li></ul>" %>
+    <% end %>
+    </ol>
+  </div>
 </div>
