@@ -1,0 +1,32 @@
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+th {
+  text-align: left;
+}
+
+nav {
+  height: 40px;
+  background-color: #B8FFDB;
+
+}
+nav div{
+  display: inline;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+nav h2 {
+	width: 80%;
+	float: left;
+	margin: 5px 0 5px 40px;
+}
+nav a {
+  text-decoration: none;
+  float: right;
+  line-height: 40px;
+  margin-right: 40px
+}
