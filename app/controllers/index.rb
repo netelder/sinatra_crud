@@ -20,6 +20,7 @@ end
 put '/notes/:id' do
 	p "------------- put"
 	p params
+	redirect '/'
 end
 
 

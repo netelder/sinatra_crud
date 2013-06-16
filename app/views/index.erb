@@ -13,7 +13,8 @@
   <div id="note_list">
     <ol>
       <% @notes.each do |note| %>
-      <%= "<li class=\"title\">#{note.title}</li><ul class=\"content\"><li>#{note.content}" %>
+      <div class="notediv" id=<%=note.id%>>
+      <%= "<li  class=\"title\">#{note.title}</li><ul class=\"content\"><li>#{note.content}" %>
       <div class="note_actions">
         <form action="/notes/<%=note.id%>" method="post">
           <input name="_method" type="hidden" value="put" />
@@ -21,10 +22,11 @@
         </form>
         <form action="/notes/<%=note.id%>" method="post">
           <input name="_method" type="hidden" value="delete" />
-          <input id="delete" type="submit" value="Delete">
+          <input id="note_delete" type="submit" value="Delete">
         </form>
       </div>
     </li></ul>
+  </div>
     <% end %>
     </ol>
   </div>
