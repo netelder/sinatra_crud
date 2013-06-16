@@ -51,3 +51,7 @@ nav a {
 .title {
   font-weight: bold;
 }
+
+.note_actions form{
+  display: inline;
+}
