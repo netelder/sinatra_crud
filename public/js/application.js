@@ -35,12 +35,18 @@ $('document').ready(function() {
   });
 
   //  TBD: re-implement using event delegation and $(this).remove logic.
-  $('#note_delete').on('click', function(e){
+  $('.note_delete').on('click', function(e){
     var response = window.confirm("Delete this note?");
     if (response === false) {
       e.preventDefault();
     }
 
+  });
+
+  // TBD: re-implement using event delegation
+  $('.note_update').on('click', function(e){
+    e.preventDefault();
+    alert("Update not yet implemented.");
   });
 
   // Update pseudocode

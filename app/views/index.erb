@@ -1,4 +1,5 @@
 <div class="container">
+
   <div class="hide" id="note_form">
     <div class="input_select">
       <form id="new_note">
@@ -10,24 +11,26 @@
       </form>
     </div>
   </div>
+
   <div id="note_list">
     <ol>
       <% @notes.each do |note| %>
       <div class="notediv" id=<%=note.id%>>
-      <%= "<li  class=\"title\">#{note.title}</li><ul class=\"content\"><li>#{note.content}" %>
-      <div class="note_actions">
-        <form action="/notes/<%=note.id%>" method="post">
-          <input name="_method" type="hidden" value="put" />
-          <input name="update" type="submit" value="Update">
-        </form>
-        <form action="/notes/<%=note.id%>" method="post">
-          <input name="_method" type="hidden" value="delete" />
-          <input id="note_delete" type="submit" value="Delete">
-        </form>
-      </div>
-    </li></ul>
-  </div>
+        <%= "<li  class=\"title\">#{note.title}</li><ul class=\"content\"><li>#{note.content}" %>
+        <div class="note_actions">
+          <form action="/notes/<%=note.id%>" method="post">
+            <input name="_method" type="hidden" value="put" />
+            <input class="note_update" type="submit" value="Update">
+          </form>
+          <form action="/notes/<%=note.id%>" method="post">
+            <input name="_method" type="hidden" value="delete" />
+            <input class="note_delete" type="submit" value="Delete">
+          </form>
+        </div>
+      </li></ul>
+    </div>
     <% end %>
-    </ol>
-  </div>
+  </ol>
+</div>
+
 </div>
