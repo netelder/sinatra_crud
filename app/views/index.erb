@@ -12,6 +12,19 @@
     </div>
   </div>
 
+  <div class="hide" id="update_form">
+    <div class="input_select">
+      <form id="update_note">
+        <input type="hidden" name="id" id="upd_id" value="0" />
+        <input type="text" name="title" id="up_title" placeholder="Note Title" size="41" autofocus>
+        <br>
+        <textarea type="text" name="content" id="up_content" placeholder="Note Content" rows="6" cols="40"></textarea>
+        <br>
+        <button id="update" type="submit" name="submit">Update</button>
+      </form>
+    </div>
+  </div>
+
   <div id="note_list">
     <ol>
       <% @notes.each do |note| %>
@@ -19,7 +32,7 @@
         <%= "<li  class=\"title\">#{note.title}</li><ul class=\"content\"><li>#{note.content}" %>
         <div class="note_actions">
           <form action="/notes/<%=note.id%>" method="post">
-            <input name="_method" type="hidden" value="put" />
+<!--             <input name="_method" type="hidden" value="put" /> -->
             <input class="note_update" type="submit" value="Update">
           </form>
           <form action="/notes/<%=note.id%>" method="post">

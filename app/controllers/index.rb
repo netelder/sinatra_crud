@@ -8,7 +8,6 @@ post '/notes/create' do
 	p params
 	note = Note.new(params)
 	if note.valid?
-		p "--------------valid"
 		note.save
 		return 'redirect' 
 	else
@@ -16,10 +15,14 @@ post '/notes/create' do
 	end
 end
 
+get '/notes/:id' do
+p params
+	note = Note.find(params[:id])
+	return note.to_json
+end
 
-put '/notes/:id' do
-	p "------------- put"
-	p params
+put '/notes' do
+	Note.update(params[:id], params)
 	redirect '/'
 end
 
